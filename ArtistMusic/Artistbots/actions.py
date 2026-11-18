@@ -1,5 +1,5 @@
 # ==========================================================
-# Copyright (c) 2026 https://t.me/NaKhoYar
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
 # Project      : NaKhoYar API Telegram Music Bot
