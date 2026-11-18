@@ -1,13 +1,13 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 #
 # Plugin       : VC Log  (who joined / who left the voice chat)
-# Location     : ArtistMusic/Artistbots/vclog.py
+# Location     : နားခိုရာ 🎧/NaKhoYar/vclog.py
 #
 # What it does:
 #   While the assistant is in a group's voice chat, the bot announces in
@@ -27,7 +27,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from pytgcalls.types import GroupCallParticipant
 
-from ArtistMusic import app, db, logger, userbot
+from နားခိုရာ 🎧 import app, db, logger, userbot
 
 from ._common import esc, mention
 from .tagall import PREFIXES, _is_admin
