@@ -1,10 +1,10 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 # ==========================================================
 #
 # Plugin   : /deleteall - wipe the group's message history
@@ -30,7 +30,7 @@ from pyrogram.errors import (
 )
 from pyrogram.types import CallbackQuery, ChatPrivileges, Message
 
-from ArtistMusic import app, db, logger
+from နားခိုရာ 🎧 import app, db, logger
 
 from ._common import confirm_buttons, esc, is_owner_or_sudoer, mention, send_message_colored
 
