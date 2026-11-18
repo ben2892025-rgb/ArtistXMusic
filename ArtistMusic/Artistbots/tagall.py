@@ -35,7 +35,7 @@ from pyrogram.errors import (
 )
 from pyrogram.types import LinkPreviewOptions, Message
 
-from ArtistMusic import app, db, logger
+from နားခိုရာ 🎧 import app, db, logger
 
 from .funtag_messages import (
     GM_MESSAGES,
