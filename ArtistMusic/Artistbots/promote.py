@@ -1,14 +1,14 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 # ==========================================================
 #
 # Plugin   : Promote / demote
-# Location : ArtistMusic/Artistbots/promote.py
+# Location : နားခိုရာ 🎧/NaKhoYar/promote.py
 #
 #   /promote /fullpromote /demote /tempadmin  (reply, @username or user-ID)
 #   Time format for /tempadmin: 30m, 2h, 1d   (auto-demote when it ends)
@@ -21,7 +21,7 @@ from pyrogram import enums, filters
 from pyrogram.errors import ChatAdminRequired, RPCError, UserAdminInvalid
 from pyrogram.types import ChatPrivileges, Message
 
-from ArtistMusic import app, logger
+from နားခိုရာ 🎧 import app, logger
 
 from ._common import admin_required, esc, extract_user_and_title, mention, parse_time
 
