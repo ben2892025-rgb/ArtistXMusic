@@ -1,13 +1,13 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 #
 # Plugin       : Group welcome card (image + info + colored buttons)
-# Location     : ArtistMusic/Artistbots/welcome.py
+# Location     : နားခိုရာ 🎧/NaKhoYar/welcome.py
 # ==========================================================
 
 import asyncio
@@ -28,7 +28,7 @@ from pyrogram.types import (
     Message,
 )
 
-from ArtistMusic import app, config, db, logger
+from နားခိုရာ 🎧 import app, config, db, logger
 
 from ._textimg import draw_text
 
