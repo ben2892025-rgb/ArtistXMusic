@@ -1,14 +1,14 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
 # Type         : API Based Telegram Music Bot
 #
-# Bot          : @ArtistApibot
-# Channel      : https://t.me/artistbots
-# GitHub       : https://github.com/elevenyts/ArtistMusic
+# Bot          : @NaKhoYar_bot
+# Channel      : https://t.me/NaKhoYar
+# GitHub       : https://github.com/ben2892025-rgb/ArtistXMusic
 #
 # Unauthorized copying, modification, or redistribution
 # of this source code without permission is prohibited.
