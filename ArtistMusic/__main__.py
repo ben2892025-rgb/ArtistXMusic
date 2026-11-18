@@ -6,9 +6,9 @@
 # Powered By   : Artist
 # Type         : API Based Telegram Music Bot
 #
-# Bot          : @ArtistApibot
-# Channel      : https://t.me/artistbots
-# GitHub       : https://github.com/elevenyts/ArtistMusic
+# Bot          : @NaKhoYar_bot
+# Channel      : https://t.me/NaKhoYar
+# GitHub       : 
 #
 # Unauthorized copying, modification, or redistribution
 # of this source code without permission is prohibited.
