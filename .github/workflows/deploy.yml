@@ -1,6 +1,6 @@
 # ==========================================================
-# CI & Deploy — ArtistMusic
-# Made by Artist · GitHub: @elevenyts · ArtistBots
+# CI & Deploy — နားခိုရာ 🎧
+# Made by Artist · GitHub: @ben2892025-rgb · NaKhoYar
 #
 # Pipeline:
 #   1. check   → syntax check + locale JSON validation   (every push / PR)
@@ -45,14 +45,14 @@ jobs:
           python-version: "3.10"
 
       - name: Syntax check (compileall)
-        run: python -m compileall -q config.py ArtistMusic
+        run: python -m compileall -q config.py နားခိုရာ 🎧
 
       - name: Validate locale JSON files
         run: |
           python - <<'PY'
           import json, pathlib, sys
           bad = 0
-          for f in sorted(pathlib.Path("ArtistMusic/locales").glob("*.json")):
+          for f in sorted(pathlib.Path("နားခိုရာ 🎧/locales").glob("*.json")):
               try:
                   json.loads(f.read_text(encoding="utf-8"))
               except Exception as e:
