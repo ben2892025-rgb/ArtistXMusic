@@ -1,13 +1,13 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 https://t.me/NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 #
 # Plugin       : Sticker  (one sticker -> its own pack)
-# Location     : ArtistMusic/Artistbots/sticker.py
+# Location     : နားခိုရာ 🎧/NaKhoYar/sticker.py
 #
 # Command:
 #   /sticker  (reply to a sticker)
@@ -33,7 +33,7 @@ from pyrogram.types import (
     Message,
 )
 
-from ArtistMusic import app, logger
+from နားခိုရာ 🎧 import app, logger
 
 from .kang import (
     MAX_STICKERS,
