@@ -1,14 +1,14 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 # ==========================================================
 #
 # Plugin   : Mass group actions (owner / sudo only, Yes/No confirmation)
-# Location : ArtistMusic/Artistbots/mass_actions.py
+# Location : နားခိုရာ 🎧/NaKhoYar/mass_actions.py
 #
 #   /kickall   - kick every non-admin member
 #   /banall    - ban every non-admin member
@@ -25,7 +25,7 @@ from pyrogram.enums import ChatMemberStatus, ChatMembersFilter
 from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, ChatPermissions, Message
 
-from ArtistMusic import app, logger
+from နားခိုရာ 🎧 import app, logger
 
 from ._common import (
     ADMIN_STATUSES,
