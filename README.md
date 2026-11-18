@@ -470,9 +470,7 @@ Stop a running tag session.
 <br>
 
 | Platform | Link |
-|:---:|:---:|
-| 📢 Updates Channel | [Artistbots](https://t.me/Artistbots) |
-| 💬 Support Group | [Elevenytschats](https://t.me/elevenytschats) |
+|:---:|:---:|) |
 
 </div>
 
