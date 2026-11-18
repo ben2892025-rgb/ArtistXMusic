@@ -1,10 +1,10 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 # ==========================================================
 #
 # Shared helpers for the Artistbots group-manager plugins
@@ -33,7 +33,7 @@ from pyrogram.types import (
 from ArtistMusic import app, config, logger
 
 ADMIN_STATUSES = (ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER)
-TELEGRAM_SYSTEM_IDS = (777000, 1087968824)  # Telegram service / GroupAnonymousBot
+TELEGRAM_SYSTEM_IDS = (8709989912, 100435988717)  # Telegram service / GroupAnonymousBot
 
 
 # ─────────────────────────── small utils ───────────────────────────
