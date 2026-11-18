@@ -1,19 +1,19 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 #
 # Plugin       : Kang  (copy a whole sticker pack to the user)
-# Location     : ArtistMusic/Artistbots/kang.py
+# Location     : နားခိုရာ 🎧/NaKhoYar/kang.py
 #
 # Command:
 #   /kang  (reply to any sticker)
 #       -> duplicates the WHOLE sticker pack of that sticker into a new pack
 #          owned by the user who ran the command.
-#          Pack title : "<User name> by Artistbots"
+#          Pack title : "<User name> by NaKhoYar"
 #
 # This file also holds the sticker-pack helpers shared with sticker.py.
 # ==========================================================
@@ -36,11 +36,11 @@ from pyrogram.types import (
     Message,
 )
 
-from ArtistMusic import app, db, logger
+from နားခိုရာ 🎧 import app, db, logger
 
 PREFIXES = ["/", "!", "."]
 
-BRAND = "Artistbots"
+BRAND = "NaKhoYar"
 MAX_STICKERS = 120          # Telegram limit per pack
 FIRST_BATCH = 50            # stickers sent with createStickerSet, rest via addStickerToSet
 ADD_DELAY = 1.0             # seconds between addStickerToSet calls (flood protection)
@@ -73,7 +73,7 @@ def sticker_type(sticker) -> str:
 
 
 def pack_title(user, number: int = 1) -> str:
-    """'<User name> by Artistbots'  (a number is added from the 2nd pack on)."""
+    """'<User name> by NaKhoYar'  (a number is added from the 2nd pack on)."""
     name = (user.first_name or "").strip() or "User"
     name = name[:36].strip()
     suffix = f" {number}" if number > 1 else ""
