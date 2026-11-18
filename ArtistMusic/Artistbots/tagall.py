@@ -1,13 +1,13 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 NaKhoYar
 # All Rights Reserved. 
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 #
 # Plugin       : Tag members  (utag / all / mention / tagall + fun tags)
-# Location     : ArtistMusic/Artistbots/tagall.py
+# Location     : နားခိုရာ 🎧/NaKhoYar/tagall.py
 #
 # Commands (group admins & sudoers only):
 #   /tagall | /all | @all | /utag | /mention [text]
