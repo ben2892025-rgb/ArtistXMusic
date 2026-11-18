@@ -1,6 +1,6 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
-# Channel : https://t.me/artistbots
+# Copyright (c) 2026 NaKhoYar
+# Channel : https://t.me/NaKhoYar
 #
 # Message pools used by tagall.py (gm / gn / hi / quotes / shayari)
 # NOTE: this is a data module - it has no handlers.
