@@ -2,8 +2,8 @@
 
 # 🏗️ Architecture
 
-How **ArtistMusic** works inside.
-Made by **Artist** · [@elevenyts](https://github.com/elevenyts) · [ArtistBots](https://t.me/Artistbots)
+How **နားခိုရာ 🎧** works inside.
+Made by **နားခိုရာ 🎧** · [@ben2892025-rgb](https://github.com/ben2892025-rgb) · [NaKhoYar](https://t.me/NaKhoYar)
 
 </div>
 
@@ -13,16 +13,16 @@ Made by **Artist** · [@elevenyts](https://github.com/elevenyts) · [ArtistBots]
 
 ## 1. Big picture
 
-ArtistMusic is a single async Python process. It runs a **bot account** (talks to users) and one to three **assistant accounts** (join voice chats and stream audio/video). Songs come from the **ArtistBots API**, with a yt-dlp + cookies fallback. **MongoDB** stores settings, and a private **logger group** doubles as a song cache.
+နားခိုရာ 🎧is a single async Python process. It runs a **bot account** (talks to users) and one to three **assistant accounts** (join voice chats and stream audio/video). Songs come from the **NaKhoYar API**, with a yt-dlp + cookies fallback. **MongoDB** stores settings, and a private **logger group** doubles as a song cache.
 
 ```mermaid
 flowchart LR
     U[Telegram users] -->|commands / buttons| B[Bot client<br/>core/bot.py]
-    B --> P[Plugins<br/>plugins/ + Artistbots/]
+    B --> P[Plugins<br/>plugins/ + NaKhoYar/]
     P --> Q[Queue<br/>helpers/_queue.py]
     P --> Y[YouTube handler<br/>core/youtube.py]
     Y -->|1. cache| L[(Logger group<br/>song cache)]
-    Y -->|2. stream / download| A[ArtistBots API]
+    Y -->|2. stream / download| A[NaKhoYar API]
     Y -->|3. fallback| C[yt-dlp + cookies]
     P --> T[TgCall<br/>core/calls.py]
     T --> UB[Assistant accounts<br/>core/userbot.py]
@@ -36,7 +36,7 @@ flowchart LR
 | **Bot** (`BOT_TOKEN`) | Receives commands, sends messages, buttons, thumbnails |
 | **Assistant(s)** (`STRING_SESSION`, `2`, `3`) | Real user accounts that join the voice chat and play the stream |
 | **py-tgcalls** | Streams media into the voice chat (uses FFmpeg) |
-| **ArtistBots API** | Resolves a YouTube ID to a stream URL / file |
+| **NaKhoYarAPI** | Resolves a YouTube ID to a stream URL / file |
 | **MongoDB** | Persistent settings and caches |
 | **Logger group** (`LOGGER_ID`) | Receives logs and stores uploaded songs as a file cache |
 
@@ -44,17 +44,17 @@ flowchart LR
 
 ## 2. Startup sequence
 
-Entry point: `bash start` → `python3 -m ArtistMusic` → `ArtistMusic/__main__.py`.
+Entry point: `bash start` → `python3 -m နားခိုရာ 🎧` → `နားခိုရာ 🎧/__main__.py`.
 
-1. **Import `ArtistMusic/__init__.py`** — sets up logging (`log.txt`, rotating 10 MB × 5), loads `Config`, validates it (`config.check()`), then creates the shared singletons in this order:
+1. **Import `နားခိုရာ 🎧/__init__.py`** — sets up logging (`log.txt`, rotating 10 MB × 5), loads `Config`, validates it (`config.check()`), then creates the shared singletons in this order:
    `app` (Bot) → dirs → `userbot` → `db` → `lang` → `tg` / `yt` → `preload` → `queue` → `tune` (TgCall).
 2. **Validate env** — missing required variables stop the bot with a clear message.
 3. **Health server** — a tiny HTTP server starts in a thread on `$PORT` (default `8000`) and answers `Bot is running`. Web-service hosts (Render, etc.) need this to see the app as alive.
 4. `db.connect()` — connect to MongoDB.
 5. `app.boot()` — start the bot client.
-6. `userbot.boot()` — start the assistant clients. The assistants also auto-join the ArtistBots community chats (see `core/userbot.py`).
+6. `userbot.boot()` — start the assistant clients. The assistants also auto-join the NaKhoYar community chats (see `core/userbot.py`).
 7. `tune.boot()` — start py-tgcalls for each assistant and register call handlers.
-8. **Load plugins** — every module in `plugins/` and `Artistbots/` is imported (discovered with `Path.rglob("*.py")`). Registering a handler is just importing the file.
+8. **Load plugins** — every module in `plugins/` and `နားခိုရာ 🎧/` is imported (discovered with `Path.rglob("*.py")`). Registering a handler is just importing the file.
 9. Set the Telegram **command menu** (`BOT_COMMANDS` in `__main__.py`).
 10. Load **sudoers** and **blacklisted users** from MongoDB into the in-memory filters.
 11. `idle()` — run until stopped; then `stop()` cancels background tasks and closes the bot, assistants and database.
@@ -76,7 +76,7 @@ Extends `PyTgCalls`. Responsible for `play_media`, `pause`, `resume`, `seek_stre
 Search (py-yt-search), URL/playlist parsing, and getting a playable source. See section 4.
 
 ### `MongoDB` — `core/mongo.py`
-Async PyMongo client (database name `ArtistMusic`). Most reads are served from **in-memory caches** (admin lists, auth, chats, language, play mode, gbans, blacklist) and written through to the database. Main collections:
+Async PyMongo client (database name `နားခိုရာ 🎧`). Most reads are served from **in-memory caches** (admin lists, auth, chats, language, play mode, gbans, blacklist) and written through to the database. Main collections:
 
 | Collection | Stores |
 |---|---|
@@ -97,7 +97,7 @@ Per-chat in-memory list of `MediaItem`s: `add`, `force_add` (play now), `get_cur
 
 ### `Preload` — `helpers/_preload.py`, `core/preload.py`
 While a song plays, the next one or two tracks are downloaded in the background so the switch is instant.
-> Note: `ArtistMusic/__init__.py` creates `preload` twice; the second one (`helpers/_preload.py`) replaces the first, so that is the one in use.
+> Note: `နားခိုရာ 🎧/__init__.py` creates `preload` twice; the second one (`helpers/_preload.py`) replaces the first, so that is the one in use.
 
 ### `Autoplay` — `core/autoplay.py`
 When the queue is empty and autoplay is on for the chat, it finds a related track based on what just played and queues it.
@@ -241,6 +241,6 @@ flowchart LR
 <div align="center">
 
 Made with ❤️ by **Artist** · Powered by **ArtistBots**
-[GitHub](https://github.com/elevenyts) · [Channel](https://t.me/Artistbots) · [Support](https://t.me/Elevenytschats)
+[GitHub](https://github.com/ben2892025-rgb) · [Channel](https://t.me/NaKhoYar) · [Support](https://t.me/Love_Story1500)
 
 </div>
