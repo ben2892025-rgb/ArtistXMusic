@@ -1,14 +1,14 @@
 # ==========================================================
-# Copyright (c) 2026 ArtistBots
+# Copyright (c) 2026 https://t.me/NaKhoYar
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Channel      : https://t.me/artistbots
+# Project      : NaKhoYar API Telegram Music Bot
+# Powered By   : NaKhoYar
+# Channel      : https://t.me/NaKhoYar
 # ==========================================================
 #
 # Plugin   : Single-user moderation
-# Location : ArtistMusic/Artistbots/actions.py
+# Location : နားခိုရာ 🎧/NaKhoYar/actions.py
 #
 #   /ban /unban /mute /unmute /kick /dban /sban /tban /tmute /kickme
 #   Every command accepts a reply, @username or user-ID.
